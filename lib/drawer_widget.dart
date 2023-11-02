@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:pygmyapp_menu/admin/admin_page.dart';
 import 'package:pygmyapp_menu/auth/login_view.dart';
-import 'package:pygmyapp_menu/cardkopsu.dart';
-import 'package:pygmyapp_menu/cardmanual.dart';
-import 'package:pygmyapp_menu/cardnkopi.dart';
 import 'package:pygmyapp_menu/hal_aboutapp.dart';
 import 'package:pygmyapp_menu/homebtn.dart';
-import 'package:pygmyapp_menu/menu_card.dart';
 import 'package:pygmyapp_menu/menu_page.dart';
 import 'package:pygmyapp_menu/provider/auth_provider.dart';
 
@@ -130,22 +126,6 @@ class DrawerWidget extends StatelessWidget {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) {
                 return const MenuPage(category: "Manual Brew",);
-              }));
-            },
-          ),
-          const Divider(),
-          ListTile(
-            leading: const CircleAvatar(
-              backgroundImage: AssetImage('asset/pygmy_white.png'),
-            ),
-            title: const Text('Pesan'),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return Menucard();
               }));
             },
           ),
